@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root { font-family: 'DM Sans', sans-serif; color: #193332; background: #f5f1e8; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f5f1e8; }
+button, textarea { font: inherit; }
+button { cursor: pointer; }
+.app-shell { width: 100%; max-width: 1440px; margin: 0 auto; padding: 30px clamp(32px, 5vw, 80px) 42px; min-height: 100vh; display: flex; flex-direction: column; }
+.topbar { display: flex; align-items: center; justify-content: space-between; padding-bottom: 68px; }
+.topbar-actions { display: flex; align-items: center; gap: 18px; }
+.reset-button { display: inline-flex; align-items: center; gap: 6px; padding: 7px 10px; border: 1px solid #d9d9ca; border-radius: 3px; background: transparent; color: #71817a; font-size: 11px; }
+.reset-button:hover { border-color: #e26d4c; color: #e26d4c; }
+.brand { display: flex; align-items: center; gap: 10px; color: #193332; font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 700; letter-spacing: -.5px; text-decoration: none; }
+.brand-mark { display: grid; place-items: center; width: 32px; height: 32px; color: #f5f1e8; background: #e26d4c; border-radius: 9px; }
+.status { display: flex; align-items: center; gap: 8px; color: #71817a; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.status-dot { width: 7px; height: 7px; background: #56a875; border-radius: 50%; box-shadow: 0 0 0 4px #dfeadd; }
+.hero { max-width: 860px; animation: rise .6s ease both; }
+.eyebrow, .lesson-tag { display: flex; align-items: center; gap: 8px; color: #e26d4c; font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: .11em; }
+h1 { margin: 18px 0 16px; color: #193332; font-family: 'Space Grotesk', sans-serif; font-size: clamp(50px, 7vw, 78px); line-height: .98; letter-spacing: -4px; }
+h1 em { color: #e26d4c; font-style: normal; }
+.hero-copy { max-width: 600px; margin: 0; color: #71817a; font-size: 17px; line-height: 1.55; }
+.workspace { width: 100%; margin-top: 54px; animation: rise .7s .1s ease both; }
+.starter-card { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; padding: 18px 20px; border: 1px dashed #cfd4c8; color: #71817a; }
+.starter-icon { display: grid; flex: 0 0 36px; place-items: center; width: 36px; height: 36px; color: #e26d4c; background: #f1e5d8; border-radius: 50%; }
+.starter-card strong, .starter-card span { display: block; }
+.starter-card strong { color: #193332; font-family: 'Space Grotesk', sans-serif; font-size: 14px; }
+.starter-card span { margin-top: 4px; font-size: 12px; }
+.conversation { display: flex; flex-direction: column; gap: 22px; margin-bottom: 24px; }
+.message-row { display: flex; align-items: flex-start; gap: 12px; max-width: 92%; }
+.message-row.user { align-self: flex-end; flex-direction: row-reverse; }
+.message-avatar { display: grid; flex: 0 0 30px; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: #f5f1e8; background: #193332; }
+.message-row.user .message-avatar { color: #193332; background: #e5dfd2; }
+.message-bubble { min-width: 0; padding: 18px 22px; border: 1px solid #e0dfd5; background: #fbfaf5; }
+.message-row.user .message-bubble { background: #e9eee5; border-color: #d8e0d2; }
+.message-label { margin-bottom: 10px; color: #e26d4c; font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; }
+.message-bubble p { margin: 0; color: #405850; font-size: 15px; line-height: 1.6; }
+.message-bubble h2 { margin: 25px 0 9px; color: #193332; font-family: 'Space Grotesk', sans-serif; font-size: 23px; letter-spacing: -.6px; }
+.message-bubble h2:first-of-type { margin-top: 8px; }
+.message-bubble ul, .message-bubble ol { padding-left: 22px; }
+.message-bubble li { color: #405850; font-size: 15px; line-height: 1.65; }
+.message-bubble pre { overflow-x: auto; margin: 14px 0 4px; padding: 17px; border-radius: 4px; background: #193332; color: #e6eee4; line-height: 1.6; }
+.message-bubble pre code { padding: 0; color: inherit; background: transparent; }
+.typing { display: flex; align-items: center; gap: 8px; margin-left: 42px; color: #71817a; font-family: 'DM Mono', monospace; font-size: 11px; }
+.prompt-card { padding: 24px 25px 18px; border: 1px solid #d9d9ca; background: #fbfaf5; box-shadow: 0 6px 0 #e4dfd2; }
+.prompt-heading, .prompt-heading > div, .prompt-footer, .level-row, .level-label { display: flex; align-items: center; }
+.prompt-heading { justify-content: space-between; color: #193332; font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 600; }
+.step-number, .required { color: #9da7a0; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .08em; }
+.step-number { margin-right: 13px; color: #e26d4c; }
+textarea { width: 100%; margin-top: 21px; resize: vertical; min-height: 78px; border: 0; outline: 0; background: transparent; color: #193332; font-size: 19px; line-height: 1.45; }
+textarea::placeholder { color: #b1b8ad; }
+.prompt-footer { justify-content: space-between; gap: 14px; margin-top: 10px; }
+.examples { display: flex; flex-wrap: wrap; gap: 7px; }
+.examples button { padding: 7px 10px; border: 1px solid #e2e1d8; border-radius: 3px; background: #f5f1e8; color: #71817a; font-size: 11px; transition: border .2s, color .2s; }
+.examples button:hover { border-color: #e26d4c; color: #e26d4c; }
+.submit-button { display: grid; flex: 0 0 44px; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; color: #fbfaf5; background: #193332; transition: transform .2s, background .2s; }
+.submit-button:hover:not(:disabled) { background: #e26d4c; transform: translateY(-2px); }
+.submit-button:disabled { cursor: not-allowed; opacity: .3; }
+.level-row { justify-content: space-between; gap: 18px; padding: 20px 3px 0; }
+.level-label { gap: 8px; color: #71817a; font-size: 13px; }
+.level-picker { display: flex; gap: 4px; padding: 3px; border: 1px solid #d9d9ca; border-radius: 4px; }
+.level-picker button { display: flex; align-items: center; gap: 5px; padding: 6px 9px; border: 0; border-radius: 2px; background: transparent; color: #71817a; font-size: 11px; }
+.level-picker button.active { color: #193332; background: #fbfaf5; box-shadow: 0 1px 4px #d9d9ca; }
+.level-picker button span { display: grid; place-items: center; width: 13px; height: 13px; color: #e26d4c; }
+.lesson-area { margin-top: 54px; }
+.loading-message, .error-message { display: flex; align-items: center; gap: 10px; padding: 20px 0; color: #71817a; font-family: 'DM Mono', monospace; font-size: 12px; }
+.error-message { color: #bd503b; }
+.lesson { padding: 38px 46px 48px; border-top: 2px solid #e26d4c; background: #fbfaf5; animation: rise .45s ease both; }
+.lesson h2 { margin: 28px 0 10px; color: #193332; font-family: 'Space Grotesk', sans-serif; font-size: 24px; letter-spacing: -.7px; }
+.lesson h2:first-of-type { margin-top: 21px; }
+.lesson p, .lesson li { max-width: 780px; color: #4d625c; font-size: 15px; line-height: 1.7; }
+.lesson ul, .lesson ol { padding-left: 22px; }
+.lesson code { padding: 2px 5px; border-radius: 3px; background: #e8eee5; color: #bb553e; font-family: 'DM Mono', monospace; font-size: .9em; }
+.lesson pre { overflow-x: auto; margin: 15px 0; padding: 18px; border-radius: 4px; background: #193332; color: #e6eee4; line-height: 1.6; }
+.lesson pre code { padding: 0; color: inherit; background: transparent; }
+footer { display: flex; gap: 10px; margin-top: auto; padding-top: 85px; color: #a1aaa0; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
+.spin { animation: spin 1s linear infinite; }
+@keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 650px) { .app-shell { width: 100%; padding: 21px 20px 27px; } .topbar { padding-bottom: 52px; } .status { font-size: 8px; } h1 { font-size: 52px; letter-spacing: -2.8px; } .hero-copy { font-size: 15px; } .workspace { margin-top: 42px; } .prompt-card { padding: 19px 17px 15px; } .prompt-footer, .level-row { align-items: flex-start; flex-direction: column; } .prompt-footer { gap: 17px; } .submit-button { align-self: flex-end; margin-top: -55px; } .level-row { gap: 13px; } .level-picker { width: 100%; } .level-picker button { flex: 1; justify-content: center; } .lesson { padding: 25px 20px 30px; } footer { padding-top: 60px; flex-wrap: wrap; } }

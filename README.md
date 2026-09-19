@@ -19,13 +19,25 @@ This makes the tool useful for learning an unfamiliar API, preparing for an inte
 
 ## Screenshots
 
-The initial screen gives the learner example prompts, a free-form question box, and Beginner, Intermediate, and Advanced level controls.
+FastAPI automatically exposes interactive Swagger documentation at `/docs`. It shows the available health and chat endpoints and their HTTP methods.
 
-![Codewise empty learning workspace](docs/screenshots/codewise-start.png)
+![Codewise Swagger API documentation](docs/screenshots/Screenshot%202026-09-19%20100258.png)
 
-After a prompt is submitted, the user message and Markdown lesson appear in the same conversation. The lesson includes runnable code and a challenge to try next.
+The initial frontend screen gives the learner example prompts, a free-form question box, and the Codewise tutor branding.
 
-![Codewise lesson response](docs/screenshots/codewise-lesson.png)
+![Codewise empty learning workspace](docs/screenshots/Screenshot%202026-09-19%20100417.png)
+
+After a prompt is submitted, the user's question and the first sections of the Markdown lesson appear in the conversation.
+
+![Codewise generated lesson](docs/screenshots/Screenshot%202026-09-19%20100501.png)
+
+The lesson continues with a runnable implementation example and line-by-line explanation.
+
+![Codewise implementation example](docs/screenshots/Screenshot%202026-09-19%20100514.png)
+
+The conversation ends with the follow-up composer and the learner-level selector, ready for another question or challenge attempt.
+
+![Codewise follow-up composer and level selector](docs/screenshots/Screenshot%202026-09-19%20100522.png)
 
 ## How to use it
 
